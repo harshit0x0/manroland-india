@@ -15,6 +15,13 @@ export default {
       },
       padding: {
         '50': '12.5rem',
+      },
+      transistionDuration: {
+        '1000': '1000ms',
+      },
+      width: {
+        'half': '50%',
+        "third": "33.33%"
       }
     },
   },
