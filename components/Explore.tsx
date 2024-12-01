@@ -16,6 +16,7 @@ Lite, the most recent addition to the family. Same legendary quality
 and entry level model.
 "
                     image="/images/Roland700.png"
+                    url="Roland700"
                 />
                 <ProductCard
                     title="Roland 900"
@@ -28,6 +29,7 @@ printing comes with a wealth of cutting-edge automation
 technologies to deliver cost and energy savings for printers, along 
 with ever faster make-ready times"
                     image="/images/Roland900.png"
+                    url="Roland900"
                 />
             </div>
         </section>

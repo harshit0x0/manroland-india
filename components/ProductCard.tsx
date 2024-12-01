@@ -6,9 +6,10 @@ type ProductCardProps = {
     title: string;
     description: string;
     image: string;
+    url: string;
 };
 
-export default function ProductCard({ title, description, image }: ProductCardProps) {
+export default function ProductCard({ title, description, image, url }: ProductCardProps) {
     return (
         <div
             className="relative group w-full min-h-80 rounded-lg overflow-hidden shadow-lg"
@@ -29,7 +30,7 @@ export default function ProductCard({ title, description, image }: ProductCardPr
                 </div>
                 <div>
                     <a
-                        href="#"
+                        href={`/products/` + url}
                         className="mt-12 w-fit rounded text-lg text-gray-300 transition-all underline duration-300"
                     >
                         View Product <FontAwesomeIcon icon={faCircleArrowRight} className='mt-2 text-transparent pl-4 group-hover:pl-0 group-hover:text-white  transistion duration-500 h-6' />
