@@ -2,7 +2,7 @@ import Link from 'next/link';
 import RedUnderline from './ui/redUnderline';
 
 export default function FooterExtension() {
-    console.log(<RedUnderline width='third' />);
+    console.log(<RedUnderline width='1/4' />);
     return (
         <footer className="bg-black text-white py-10 px-8">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -22,31 +22,31 @@ export default function FooterExtension() {
                         <li>
                             <Link href="/about-us" className="group text-gray-300">
                                 About us
-                                <div className={`w-0 group-hover:w-third h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
+                                <div className={`w-0 group-hover:w-1/4 h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
                             </Link>
                         </li>
                         <li>
                             <Link href="/products" className="group text-gray-300">
                                 Products
-                                <div className={`w-0 group-hover:w-third h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
+                                <div className={`w-0 group-hover:w-1/4 h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
                             </Link>
                         </li>
                         <li>
                             <Link href="/services" className="group text-gray-300">
                                 Services
-                                <div className={`w-0 group-hover:w-third h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
+                                <div className={`w-0 group-hover:w-1/4 h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
                             </Link>
                         </li>
                         <li>
                             <Link href="/support" className="group text-gray-300">
                                 Support
-                                <div className={`w-0 group-hover:w-third h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
+                                <div className={`w-0 group-hover:w-1/4 h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
                             </Link>
                         </li>
                         <li>
                             <Link href="/contact" className="group text-gray-300">
                                 Contact
-                                <div className={`w-0 group-hover:w-third h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
+                                <div className={`w-0 group-hover:w-1/4 h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
                             </Link>
                         </li>
                     </ul>

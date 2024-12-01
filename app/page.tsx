@@ -1,6 +1,6 @@
 import IntroSection from '../components/IntroSection';
 import Hero from '../components/Hero';
-import PartnerSection from '../components/Partners';
+import ClientSection from '../components/Clients';
 import Explore from '../components/Explore';
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Hero />
       <IntroSection />
-      <PartnerSection />
+      <ClientSection />
       <Explore />
     </>
   );

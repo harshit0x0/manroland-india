@@ -11,7 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: '#003B5C'
+        primary: '#003B5C',
+        primaryLight: 'var(--primary-light)',
       },
       padding: {
         '50': '12.5rem',
@@ -22,7 +23,8 @@ export default {
       width: {
         'half': '50%',
         "third": "33.33%"
-      }
+      },
+
     },
   },
   plugins: [],

@@ -8,34 +8,34 @@ const IntroSection = () => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [isZoomed, setIsZoomed] = useState(false);
     const [showCustomCursor, setShowCustomCursor] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(false);
 
     useEffect(() => {
-        const section = document.getElementById('intro');
+        setIsDesktop(window.innerWidth > 546);
+    }, []);
 
-        // Intersection Observer to detect visibility
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const entry = entries[0];
-                if (entry.isIntersecting && !isVisible) {
+    useEffect(() => {
+        const handleScroll = () => {
+            const element = document.getElementById('intro');
+            if (element) {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
                     setIsVisible(true);
+                } else {
+                    setIsVisible(false);
                 }
-            },
-            { threshold: 0.1 }
-        );
-
-        if (section) observer.observe(section);
-
-        return () => {
-            if (section) observer.unobserve(section);
+            }
         };
-    }, [isVisible]);
+        window.addEventListener('scroll', handleScroll);
+    }, []);
+
 
     useEffect(() => {
         // Update cursor position
         const handleMouseMove = (e: MouseEvent) => {
             setTimeout(() => {
                 setCursorPosition({ x: e.clientX, y: e.clientY });
-            }, 100);
+            }, 10);
         };
 
         document.addEventListener('mousemove', handleMouseMove);
@@ -48,21 +48,21 @@ const IntroSection = () => {
     return (
         <div>
             <section
-                className={`h-[80vh] md:h-[100vh]  bg-gradient-to-b from-primary to-black flex text-center text-white relative group ${isVisible ? 'visible' : ''
+                className={`h-[80vh] md:h-[100vh] bg-gradient-to-b from-primary to-black flex text-center text-white relative group ${isVisible ? 'visible' : ''
                     }`}
                 id="intro"
                 onMouseEnter={() => setShowCustomCursor(true)} // Show custom cursor
                 onMouseLeave={() => setShowCustomCursor(false)} // Hide custom cursor
             >
                 {/* only on desktop */}
-                {window.innerWidth > 546 && <VideoGroup />}
+                {isDesktop && <VideoGroup />}
                 <div
-                    className={`mx-auto w-full md:w-1/2 my-auto space-y-8  fade-up ${isVisible ? 'visible' : ''}`}
+                    className={`mx-auto w-full md:w-1/2 my-auto z-5 space-y-8  fade-up ${isVisible ? 'visible' : ''}`}
+                    onMouseEnter={() => setIsZoomed(true)}
+                    onMouseLeave={() => setIsZoomed(false)}
                 >
                     <h2
-                        className="text-3xl md:text-5xl font-bold z-2"
-                        onMouseEnter={() => setIsZoomed(true)}
-                        onMouseLeave={() => setIsZoomed(false)}
+                        className="text-3xl md:text-5xl font-bold z-5"
                     >
                         Pioneering Printing Excellence
                     </h2>
@@ -74,16 +74,17 @@ const IntroSection = () => {
                 </div>
             </section>
             {/* Custom Cursor */}
-            {showCustomCursor && window.innerWidth > 546 && (
+            {showCustomCursor && isDesktop && (
                 <div
                     className={`custom-cursor`}
                     style={{
                         left: `${cursorPosition.x}px`,
                         top: `${cursorPosition.y}px`,
-                        transform: isZoomed ? 'scale(2)' : 'scale(1)',
-                        zIndex: isZoomed ? 1 : 100,
+                        transform: isZoomed ? 'scale(1.8)' : 'scale(1)',
+                        zIndex: 0,
                         backgroundColor: isZoomed ? 'black' : 'white',
-                        transition: 'transform 0.3s ease'
+                        transition: 'transform 0.3s ease',
+                        pointerEvents: 'none'
                     }}
                 />)}
         </div>

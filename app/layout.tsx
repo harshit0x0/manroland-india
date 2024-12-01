@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-gray-50 text-gray-900">
         <Header />
-        <main className="m-0 w-full">{children}</main>
+        <main className="m-0 w-full scroll-smooth" id='main'>{children}</main>
         <FooterExtension />
         <Footer />
       </body>

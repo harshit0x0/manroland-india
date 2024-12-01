@@ -5,7 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #003a5cbf;
+  --primary-light: #003a5c2d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,8 +23,8 @@ body {
 
 .fade-up {
   opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 2s ease, transform 2s ease;
+  transform: translateY(60px);
+  transition: opacity 1.8s ease, transform 1.2s ease;
 }
 
 .fade-up.visible {
@@ -43,7 +43,7 @@ body {
   /* Prevent interference with interactions */
   transform: translate(-50%, -50%);
   /* Center the circle on the cursor */
-  z-index: 1000;
+  /* z-index: 1000; */
   /* Ensure it appears above all elements */
 }
 

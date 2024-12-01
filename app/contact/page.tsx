@@ -31,17 +31,17 @@ export default function ContactPage() {
         <main className="bg-gray-100 text-gray-800">
             {/* Hero Section */}
             <section className="bg-primary text-white text-center py-20 px-8">
-                <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
-                <p className="text-lg max-w-3xl mx-auto">
+                <h1 className="text-3xl md:text-5xl font-bold mb-4">Contact Us</h1>
+                <p className=" md:text-lg max-w-3xl mx-auto">
                     Have questions or want to learn more about our products and services? Get in touch
-                    with us. We're here to help!
+                    with us. We&apos;re here to help!
                 </p>
             </section>
 
             {/* Contact Form Section */}
-            <section className="py-20 px-8">
-                <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
-                    <h2 className="text-3xl font-bold mb-6 text-center">Send Us a Message</h2>
+            <section className="py-20 px-3 md:px-8 bg-primaryLight">
+                <div className="lg:w-1/2 mx-auto bg-gray-200 rounded-lg shadow-lg p-6 md:p-8">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">Send Us a Message</h2>
                     {successMessage && (
                         <div className="bg-green-100 text-green-700 p-4 mb-6 rounded">
                             {successMessage}
@@ -59,7 +59,7 @@ export default function ContactPage() {
                                 value={formData.name}
                                 onChange={handleInputChange}
                                 required
-                                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                className="w-full  text-gray-100 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="Your Name"
                             />
                         </div>
@@ -74,7 +74,7 @@ export default function ContactPage() {
                                 value={formData.email}
                                 onChange={handleInputChange}
                                 required
-                                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                className="w-full  text-gray-100 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="Your Email Address"
                             />
                         </div>
@@ -88,7 +88,7 @@ export default function ContactPage() {
                                 value={formData.message}
                                 onChange={handleInputChange}
                                 required
-                                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                className="w-full  text-gray-100 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                                 rows={5}
                                 placeholder="Your Message"
                             ></textarea>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                     {/* Address */}
                     <div className="text-center">
                         <h3 className="text-xl font-bold mb-2">Our Address</h3>
-                        <p>
+                        <p className='text-sm text-gray-500'>
                             Manroland India<br />
                             Printing Solutions Pvt. Ltd.<br />
                             New Delhi, India
@@ -119,7 +119,7 @@ export default function ContactPage() {
                     {/* Phone */}
                     <div className="text-center">
                         <h3 className="text-xl font-bold mb-2">Call Us</h3>
-                        <p>
+                        <p className='text-sm text-gray-500'>
                             Phone: +91-12345-67890<br />
                             Fax: +91-98765-43210
                         </p>
@@ -128,7 +128,7 @@ export default function ContactPage() {
                     {/* Email */}
                     <div className="text-center">
                         <h3 className="text-xl font-bold mb-2">Email Us</h3>
-                        <p>
+                        <p className='text-sm text-gray-500'>
                             <a href="mailto:info@manroland-india.com" className="text-primary hover:underline">
                                 info@manroland-india.com
                             </a>
