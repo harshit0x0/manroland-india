@@ -1,34 +1,60 @@
-'use client'
+'use client';
+
+import { useRef, useState, useEffect } from "react";
+
 interface VideoProps extends React.HTMLProps<HTMLVideoElement> {
     src: string;
 }
 
 export function Video({ src, ...props }: VideoProps) {
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [isPlaying, setIsPlaying] = useState(false);
 
-    // @ts-expect-error because of video element
-    function playVideo(e) {
-        const videoPromise = (e.target as HTMLVideoElement).play();
-        if (videoPromise !== undefined) {
-            videoPromise.then(() => {
-                e.target.play();
-                e.target.currentTime = 0;
-            }).catch(error => { console.log(error) });
+    useEffect(() => {
+        const video = videoRef.current;
+        if (video) {
+            const handlePlay = () => setIsPlaying(true);
+            const handlePause = () => setIsPlaying(false);
+
+            video.addEventListener("play", handlePlay);
+            video.addEventListener("pause", handlePause);
+
+            return () => {
+                video.removeEventListener("play", handlePlay);
+                video.removeEventListener("pause", handlePause);
+            };
         }
-    }
+    }, []);
+
+    const playVid = async () => {
+        if (videoRef.current && videoRef.current.paused) {
+            try {
+                await videoRef.current.play();
+            } catch (error) {
+                console.error("Failed to play video:", error);
+            }
+        }
+    };
+
+    const pauseVid = () => {
+        if (videoRef.current && !videoRef.current.paused) {
+            videoRef.current.pause();
+        }
+    };
 
     return (
         <video
             {...props}
+            ref={videoRef}
             preload="auto"
-            autoPlay={false}
-            loop={true}
-            className="w-full h-full rounded-lg border-2 border-blue-500"
+            loop
             muted
-            onMouseOver={playVideo}
-            onMouseLeave={(e) => { (e.target as HTMLVideoElement).pause(); }}
+            className="w-full h-full rounded-lg border-2 border-blue-500"
+            onMouseOver={playVid}
+            onMouseLeave={pauseVid}
         >
             <source src={src} type="video/mp4" />
-        </ video>
-    )
+            Your browser does not support the video tag.
+        </video>
+    );
 }
-
