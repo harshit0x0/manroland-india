@@ -29,7 +29,9 @@ export function Video({ src, ...props }: VideoProps) {
     const playVid = async () => {
         if (videoRef.current && videoRef.current.paused) {
             try {
-                await videoRef.current.play();
+                setTimeout(async () => {
+                    await videoRef.current?.play();
+                }, 200)
             } catch (error) {
                 console.error("Error playing video:", error);
             }
