@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 interface VideoProps extends React.HTMLProps<HTMLVideoElement> {
     src: string;
@@ -8,13 +8,13 @@ interface VideoProps extends React.HTMLProps<HTMLVideoElement> {
 
 export function Video({ src, ...props }: VideoProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
-    const [isPlaying, setIsPlaying] = useState(false);
 
     useEffect(() => {
         const video = videoRef.current;
         if (video) {
-            const handlePlay = () => setIsPlaying(true);
-            const handlePause = () => setIsPlaying(false);
+            // Adding event listeners (optional, for logging or other effects)
+            const handlePlay = () => console.log("Video is playing");
+            const handlePause = () => console.log("Video is paused");
 
             video.addEventListener("play", handlePlay);
             video.addEventListener("pause", handlePause);
@@ -31,7 +31,7 @@ export function Video({ src, ...props }: VideoProps) {
             try {
                 await videoRef.current.play();
             } catch (error) {
-                console.error("Failed to play video:", error);
+                console.error("Error playing video:", error);
             }
         }
     };
