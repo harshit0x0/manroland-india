@@ -21,7 +21,7 @@ export default function ProductCard({ title, description, image, url }: ProductC
             {/* Text Content */}
             <div className="relative z-10 flex flex-col justify-between text-white h-full px-5 md:px-20 pt-12 pb-8">
                 <div>
-                    <h3 className="text-4xl group-hover:text-red-500 mb-2 transition-all duration-300">
+                    <h3 className="text-4xl group-hover:text-red-500 font-semibold mb-2 transition-all duration-300">
                         {title}
                         <RedUnderLine width='3/4' />
                         {/* <div className='w-0 group-hover:w-3/4 h-0.5 bg-red-500 transistion duration-300'></div> */}

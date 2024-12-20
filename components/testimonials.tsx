@@ -6,28 +6,28 @@ import Image from "next/image";
 
 const testimonialData = [
     {
-        name: "Deepak Walia",
-        designation: "Managing Director, Manroland India",
-        url: "/images/bikano.jpg",
-        message: "I am very happy that vaishali pandey is doing such a great job.",
+        name: "Borkar",
+        designation: "Managing Director, Borkars",
+        url: "/images/customers/borkars.jpeg",
+        message: "Manroland is doing such a great job. They are really the best in the market. Period",
     },
     {
-        name: "Peter Sir",
-        designation: "Assistant Retired Managing Director, Manroland India",
-        url: "/images/cadbury.jpg",
-        message: "I am very happy that vaishali pandey is doing such a great job. I am retired",
+        name: "Elvies pricely",
+        designation: "Assistant Retired Managing Director, galaxy industries",
+        url: "/images/customers/galaxy.jpeg",
+        message: "I am very happy With the services that manroland Provided.",
     },
     {
-        name: "Deepak Walia",
-        designation: "Managing Director, Manroland India",
-        url: "/images/bikano.jpg",
-        message: "I am very happy that vaishali pandey is doing such a great job.",
+        name: "Borkar",
+        designation: "Managing Director, Borkars",
+        url: "/images/customers/borkars.jpeg",
+        message: "Manroland is doing such a great job. They are really the best in the market. Period",
     },
     {
-        name: "Peter Sir",
-        designation: "Assistant Retired Managing Director, Manroland India",
-        url: "/images/cadbury.jpg",
-        message: "I am very happy that vaishali pandey is doing such a great job. I am retired",
+        name: "Elvies pricely",
+        designation: "Assistant Retired Managing Director, galaxy industries",
+        url: "/images/customers/galaxy.jpeg",
+        message: "I am very happy With the services that manroland Provided.",
     },
 ];
 
@@ -42,9 +42,9 @@ export default function Testimonials() {
                         <polyline points="90,20 900,300 30, 350 1000, 700" fill="none" stroke="#9970DB" strokeWidth="15" />
                     </svg>
                 </div> */}
-                <h2 className="text-2xl lg:text-4xl font-thin text-center mb-10 z-2">What Our Cusomers Say</h2>
+                <h2 className="text-2xl lg:text-4xl font-thin text-center mb-10 z-2">Testimonials that Shine</h2>
                 <div className="relative overflow-hidden" id="scrollParent">
-                    <div className="flex animate-scroll space-x-6 lg-space-x-12 w-[150%] " id="scrollContainer">
+                    <div className="flex animate-scroll space-x-6 lg-space-x-12 text-center w-[250%] lg:w-[150%] " id="scrollContainer">
                         {/* Testimonial Cards */}
                         {testimonialData.map((data, index) => (
                             <div
@@ -54,7 +54,7 @@ export default function Testimonials() {
                                 <p className="italic text-lg mb-4">
                                     {data.message}
                                 </p>
-                                <div className="flex items-center">
+                                <div className="flex flex-col md:flex-row items-center">
                                     <Image
                                         src={data.url}
                                         alt="Client"

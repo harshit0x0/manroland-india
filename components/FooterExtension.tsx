@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function FooterExtension() {
     return (
-        <footer className="bg-black text-white py-10 px-8">
+        <footer className="bg-black text-white py-10 px-8 relative">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* About Section */}
                 <div>
@@ -18,7 +18,7 @@ export default function FooterExtension() {
                     <h3 className="text-lg font-bold mb-4">Quick Links</h3>
                     <ul className="space-y-2 pl-2">
                         <li>
-                            <Link href="/about-us" className="group text-gray-300">
+                            <Link href="/about" className="group text-gray-300">
                                 About us
                                 <div className={`w-0 group-hover:w-1/4 h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
                             </Link>
