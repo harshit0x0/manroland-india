@@ -12,7 +12,7 @@ export default function Hero() {
                             <h1 className="text-5xl md:text-7xl p-0  font-bold mb-1">manr<span className="text-blue-900">o</span>land</h1>
                             <h2 className="text-3xl md:text-5xl text-red-600 p-0 font-bold">
                                 sheetfed
-                                <span className="text-3xl text-primary p-0 font-bold ml-1 mb-1">in</span>
+                                <span className="text-3xl text-red-100 p-0 font-bold ml-1 mb-1">in</span>
                             </h2>
 
                         </div>

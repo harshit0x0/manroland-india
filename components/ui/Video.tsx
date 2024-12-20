@@ -39,8 +39,12 @@ export function Video({ src, ...props }: VideoProps) {
     };
 
     const pauseVid = () => {
-        if (videoRef.current && !videoRef.current.paused) {
-            videoRef.current.pause();
+        try {
+            if (videoRef.current && !videoRef.current.paused) {
+                videoRef.current.pause();
+            }
+        } catch (error) {
+            console.error("Error pausing video:", error);
         }
     };
 

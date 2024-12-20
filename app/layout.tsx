@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script src="https://kit.fontawesome.com/cc0e184fdf.js" crossOrigin='anonymous'></script>
       </head>
-      <body className="bg-gray-50 text-gray-900">
+      <body className="bg-gray-50 text-gray-900" id='body'>
         <Header />
         <main className="m-0 w-full scroll-smooth" id='main'>{children}</main>
         <FooterExtension />

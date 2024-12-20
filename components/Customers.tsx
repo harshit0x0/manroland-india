@@ -1,10 +1,39 @@
+'use client';
+import { useEffect } from "react";
 import Image from "next/image";
+
 export default function CustomersSection() {
+    useEffect(() => {
+        const customer = document.querySelector("#customerSection");
+        const distY = customer?.getBoundingClientRect().top;
+        const loveText = document.getElementById("loveText");
+
+        const handleScroll = () => {
+            // console.log("scrolled");
+            // console.log("window.scrollY: ", window.scrollY);
+            if (!distY || !customer.clientHeight) return;
+            if (window.scrollY > distY - 400 && window.scrollY < distY + customer?.clientHeight - 400) {
+                loveText?.classList.add("text-red-600");
+                loveText?.classList.add("text-5xl");
+                // console.log("effects added");
+            }
+            else {
+                loveText?.classList.remove("text-red-600");
+                loveText?.classList.remove("text-5xl");
+                // console.log("effects removed");
+            }
+        }
+        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("beforeunload", () => {
+            window.scrollTo(0, 0);
+        })
+    }, []);
+
     return (
-        <section className="bg-white text-black min-h-[100vh] py-10 flex items-center group">
+        <section className="bg-white text-black min-h-[100vh] py-10 flex items-center group" id="customerSection">
             <div className="container mx-auto md:flex-row flex flex-col" >
                 <div className="md:w-5/6 px-10 md:px-20">
-                    <h2 className="text-2xl lg:text-3xl font-thin">Our Customers <span className="group-hover:text-red-600 font-bold group-hover:text-5xl transition-all duration-1000">love</span> us!</h2>
+                    <h2 className="text-2xl lg:text-3xl font-thin">Our Customers <span className="font-bold transition-all duration-1000" id="loveText">love</span> us!</h2>
                     <p className="mt-10 text-sm leading-7 lg:leading-8 font-thin">
                         At Manroland, we take pride in delivering unparalleled printing solutions that exceed expectations. Our commitment to innovation, precision, and quality has earned us the trust of clients across the globe. Each partnership is built on understanding their unique needs and delivering results that drive success.
                         <br />
