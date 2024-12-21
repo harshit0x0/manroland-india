@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+// import Image from 'next/image';
 // import RedUnderline from './ui/redUnderline';
 
 export default function Header() {
@@ -24,7 +25,20 @@ export default function Header() {
     <header className="bg-primary text-white shadow py-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className='px-4' >
-          Manroland
+          {/* <Image
+            src="/images/logos/manroland-logo.jpg"
+            alt="Logo"
+            width={100}
+            height={600}
+            className=""
+          /> */}
+          <div className="mx-auto flex flex-col my-0 space-y-0 items-end w-fit">
+            <div className="text-lg lg:text-2xl p-0  font-bold mb-0">manroland </div>
+            <div className="text-sm lg:text-md text-red-600 p-0 font-bold">
+              sheetfed
+              {/* <span className="text-3xl text-red-100 p-0 font-bold ml-1 mb-1">in</span> */}
+            </div>
+          </div>
         </Link>
         <nav>
           <ul className={`text-sm  md:flex transistion duration-500 ease-in-out ` +
@@ -45,6 +59,9 @@ export default function Header() {
               <div className={`w-0 group-hover:w-full h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
             </li>
             <li className='group'><Link href="/consumables">Consumables</Link>
+              <div className={`w-0 group-hover:w-full h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
+            </li>
+            <li className='group'><Link href="/services">Services</Link>
               <div className={`w-0 group-hover:w-full h-0.5 bg-red-500 transistion duration-500 ease-in-out`}></div>
             </li>
             <li className='group'><Link href="/partners">Partners</Link>

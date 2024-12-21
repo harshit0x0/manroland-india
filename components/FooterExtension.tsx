@@ -54,9 +54,13 @@ export default function FooterExtension() {
                 <div>
                     <h3 className="text-lg font-bold mb-4">Contact Us</h3>
                     <ul className="space-y-2 text-sm text-gray-300">
-                        <li>Phone: +91-123-456-7890</li>
-                        <li>Email: support@manrolandindia.com</li>
-                        <li>Address: Manroland India, 123 Business Park, New Delhi, India</li>
+                        <li>Phone: +01 145577393</li>
+                        <li>Email: info@manroland.sheetfed.com</li>
+                        <li>Address: MR Sheetfed India Pvt Ltd <br />
+                            A-7, Phase 2 Community Centre <br />
+                            Naraina Industrial Area,
+                            New Delhi – 110028
+                        </li>
                     </ul>
                     <div className="mt-4 flex space-x-4">
                         {/* Social Media Icons */}

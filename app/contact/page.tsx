@@ -110,9 +110,11 @@ export default function ContactPage() {
                     <div className="text-center">
                         <h3 className="text-xl font-bold mb-2">Our Address</h3>
                         <p className='text-sm text-gray-500'>
-                            Manroland India<br />
-                            Printing Solutions Pvt. Ltd.<br />
-                            New Delhi, India
+                            MR Sheetfed India Pvt Ltd <br />
+                            A-7, Phase 2 Community Centre <br />
+                            Naraina Industrial Area <br />
+                            New Delhi – 110028
+
                         </p>
                     </div>
 
@@ -120,8 +122,7 @@ export default function ContactPage() {
                     <div className="text-center">
                         <h3 className="text-xl font-bold mb-2">Call Us</h3>
                         <p className='text-sm text-gray-500'>
-                            Phone: +91-12345-67890<br />
-                            Fax: +91-98765-43210
+                            Phone:  +01 145577393<br />
                         </p>
                     </div>
 
@@ -129,8 +130,8 @@ export default function ContactPage() {
                     <div className="text-center">
                         <h3 className="text-xl font-bold mb-2">Email Us</h3>
                         <p className='text-sm text-gray-500'>
-                            <a href="mailto:info@manroland-india.com" className="text-primary hover:underline">
-                                info@manroland-india.com
+                            <a href="mailto:info@manroland.sheetfed.com" className="text-primary hover:underline">
+                                info@manroland.sheetfed.com
                             </a>
                         </p>
                     </div>

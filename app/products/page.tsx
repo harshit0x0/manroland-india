@@ -21,6 +21,14 @@ const products = [
         image: '/images/Roland900.png', // Replace with your image path
         url: 'Roland900',
     },
+    {
+        id: 3,
+        name: '700 Evolution Speed',
+        description:
+            'The ROLAND 700 Evolution Speed designed from the ground up and incorporating a sleek, futuristic look, incorporates many new technological developments, aimed to give printers unprecedented levels of efficiency, productivity, operation and quality.',
+        image: '/images/Roland900.png', // Replace with your image path
+        url: 'EvolutionSpeed700',
+    },
 ];
 
 export default function ProductsPage() {
