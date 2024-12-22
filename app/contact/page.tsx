@@ -1,6 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import { sendMail } from '@/lib/sendMail';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({
@@ -10,21 +13,44 @@ export default function ContactPage() {
     });
 
     const [successMessage, setSuccessMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({ ...prevData, [name]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsLoading(true);
+        try {
+            const { name, email, message } = formData;
+            if (!name || !email || !message) {
+                throw new Error("Missing required details");
+            }
+            const args = {
+                senderAddress: email,
+                recipients: {
+                    to: [{
+                        address: "vaishali.pandey@manrolandsheetfed.com",
+                        displayName: "Manroland Sheetfed India- Vaishali Pandey"
+                    }]
+                },
+                content: {
+                    subject: `Message by ` + name,
+                    plainText: message
+                }
+            }
+            await sendMail(args);
+            setSuccessMessage('Thank you for reaching out! We will get back to you shortly.');
+            setFormData({ name: '', email: '', message: '' });
+        } catch (e) {
+            console.log(e);
+            alert(`${e} Please try again!`);
+        }
+        // setTimeout(() => setIsLoading(false), 4000);
+        setIsLoading(false);
 
-        // Placeholder for form submission logic
-        // Replace this with your actual API call or email service logic
-        console.log('Form submitted:', formData);
-
-        setSuccessMessage('Thank you for reaching out! We will get back to you shortly.');
-        setFormData({ name: '', email: '', message: '' });
     };
 
     return (
@@ -38,6 +64,7 @@ export default function ContactPage() {
                 </p>
             </section>
 
+
             {/* Contact Form Section */}
             <section className="py-20 px-3 md:px-8 bg-primaryLight">
                 <div className="lg:w-1/2 mx-auto bg-gray-200 rounded-lg shadow-lg p-6 md:p-8">
@@ -45,6 +72,14 @@ export default function ContactPage() {
                     {successMessage && (
                         <div className="bg-green-100 text-green-700 p-4 mb-6 rounded">
                             {successMessage}
+                        </div>
+                    )}
+                    {isLoading && (
+                        <div className="bg-green-200 text-gray-700 p-4 mb-6 rounded">
+                            <div className="flex w-full items-center mx-auto">
+                                <span className='text-lg font-bold text-center mr-4'>Sending Mail, Please Wait</span>
+                                <FontAwesomeIcon icon={faSpinner} className="animate-spin mr-2" />
+                            </div>
                         </div>
                     )}
                     <form onSubmit={handleSubmit}>
@@ -59,7 +94,7 @@ export default function ContactPage() {
                                 value={formData.name}
                                 onChange={handleInputChange}
                                 required
-                                className="w-full  text-gray-100 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                className="w-full  text-black px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="Your Name"
                             />
                         </div>
@@ -74,7 +109,7 @@ export default function ContactPage() {
                                 value={formData.email}
                                 onChange={handleInputChange}
                                 required
-                                className="w-full  text-gray-100 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                className="w-full  text-black px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                                 placeholder="Your Email Address"
                             />
                         </div>
@@ -88,7 +123,7 @@ export default function ContactPage() {
                                 value={formData.message}
                                 onChange={handleInputChange}
                                 required
-                                className="w-full  text-gray-100 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                className="w-full  text-black px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                                 rows={5}
                                 placeholder="Your Message"
                             ></textarea>

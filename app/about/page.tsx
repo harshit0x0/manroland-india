@@ -7,19 +7,19 @@ const messages = [
         name: "Peter Rigo",
         role: "Director Sales and Buises Development",
         message: "Technology is our canvas. With every solution we create, we strive to paint a masterpiece.",
-        image: "/images/people/PeterRigo.jpeg",
+        image: "/images/people/PeterRigo.jpg",
     },
     {
         name: "Deepak Walia",
         role: "Managing Director",
         message: "Our journey is fueled by passion and dedication to innovation. Together, we aim to redefine excellence.",
-        image: "/images/people/deepakWalia.jpeg", // Replace with actual paths
+        image: "/images/people/deepakWalia.jpg", // Replace with actual paths
     },
     {
-        name: "---",
-        role: "COO",
+        name: "Vijay Kumar",
+        role: "All India Service Head",
         message: "Operational brilliance is the backbone of our success. It’s a privilege to steer this ship forward.",
-        image: "/images/vijay.jpg",
+        image: "/images/people/VijayKumar.jpg",
     },
 ];
 
@@ -40,19 +40,19 @@ export default function AboutPage() {
             {/* messages by important people */}
             <section className="bg-gradient-to-b from-white to-gray-100 py-16">
                 <div className="container mx-auto px-6 lg:px-12">
-                    <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 animate-fadeIn">A Message From Our Leadership</h2>
+                    <h2 className="text-2xl md:text-4xl font-bold text-center mb-10  animate-fadeIn">A Message From Our Leadership</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {messages.map((person, index) => (
                             <div
                                 key={index}
-                                className="p-6 bg-primaryLight text-gray-800 rounded-lg shadow-lg transform transition-transform hover:scale-105 animate-slideUp"
+                                className="p-6 bg-primaryLight text-gray-800 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-500 animate-slideUp"
                             >
                                 <Image
                                     src={person.image}
                                     alt={person.name}
-                                    height={20}
-                                    width={20}
-                                    className="w-20 h-20 rounded-full mx-auto mb-4"
+                                    height={200}
+                                    width={200}
+                                    className="w-40 h-40 rounded-full mx-auto mb-4"
                                 />
                                 <h3 className="text-2xl font-bold text-center mb-2">{person.name}</h3>
                                 <p className="text-center text-sm text-gray-500 mb-4">{person.role}</p>

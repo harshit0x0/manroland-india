@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard";
 
 export default function Explore() {
     return (
-        <section className="py-10 px-4 md:px-12 pb-20 bg-gray-400">
+        <section className="py-20 px-4 md:px-12 pb-20 bg-gray-200">
             <h2 className="text-2xl md:text-3xl font-thin mb-10 md:mb-12 font-sans">Explore Our Products</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <ProductCard
@@ -30,6 +30,12 @@ technologies to deliver cost and energy savings for printers, along
 with ever faster make-ready times"
                     image="/images/Roland900.png"
                     url="Roland900"
+                />
+                <ProductCard
+                    title="700 Evolution Speed"
+                    description=" The ROLAND 700 Evolution Speed designed from the ground up and incorporating a sleek, futuristic look, incorporates many new technological developments, aimed to give printers unprecedented levels of efficiency, productivity, operation and quality."
+                    image="/images/Roland900.png"
+                    url="EvolutionSpeed700"
                 />
             </div>
         </section>

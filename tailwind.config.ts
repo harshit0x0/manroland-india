@@ -14,6 +14,9 @@ export default {
         primary: '#003B5C',
         primaryLight: 'var(--primary-light)',
       },
+      fontSize: {
+        '9xl': '8rem'
+      },
       padding: {
         '50': '12.5rem',
       },

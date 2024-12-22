@@ -70,7 +70,7 @@ const ProServ = () => {
 
                         {/* Text Section */}
                         <div className="lg:w-2/3 w-full bg-blue-50 shadow-lg">
-                            <h2 className="text-2xl bg-blue-500 py-6 px-6 lg:px-12 font-bold text-gray-800">{service.title}</h2>
+                            <h2 className="text-2xl bg-primary py-6 px-6 lg:px-12 font-bold text-white">{service.title}</h2>
                             <div className="bg-gray-100 py-6 px-6 lg:px-12">
                                 <p className="text-gray-600 mb-6">{service.description}</p>
                                 <ul className="list-disc list-inside space-y-3 text-gray-700">

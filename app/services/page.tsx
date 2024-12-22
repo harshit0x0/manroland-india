@@ -19,18 +19,11 @@ export default function Services() {
             imgUrl: '/images/telepresence.jpg'
         },
         {
-            name: "Augmented Reality (AR)",
-            description:
-                "Experience immersive problem-solving with AR technology, enabling efficient support and training sessions.",
-            link: "/services/ar",
-            imgUrl: '/images/vr.jpg'
-        },
-        {
             name: "Press Pilot Guide",
             description:
-                "Navigate your printing operations effortlessly with the Press Pilot Guide, ensuring optimal efficiency.",
+                "Navigate your printing operations through modern VR tech effortlessly with the Press Pilot Guide, ensuring optimal efficiency.",
             link: "/services/press-pilot-guide",
-            imgUrl: '/images/roland900/fifth.jpg'
+            imgUrl: '/images/vr.jpg'
         },
     ];
 

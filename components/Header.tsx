@@ -41,7 +41,7 @@ export default function Header() {
           </div>
         </Link>
         <nav>
-          <ul className={`text-sm  md:flex transistion duration-500 ease-in-out ` +
+          <ul className={`lg:text-lg text-sm  md:flex transistion duration-500 ease-in-out ` +
             (open ? ' flex-col opacity-90 absolute top-0 py-10 px-12 h-screen right-0 space-y-10 bg-white text-black' : ' space-x-6  hidden')}>
             {
               open && (

@@ -4,33 +4,38 @@ import Image from 'next/image';
 const partnersData = [
     {
         name: "Busch",
-        logo: "/images/logos/busch-logo.jpg", // Replace with actual image paths
-        description: "Leading manufacturer of industrial printing components.",
-        website: "https://partner-a.com",
+        logo: "/images/logos/busch-logo.jpg",
+        description: "German engineering excellence – printing-related products manufactured by Gerhard BUSCH GmbH. Helping to maximise efficiencies in the print room.",
+        website: "http://www.buschgraphic.co.uk/",
     },
     {
-        name: "Printcom",
-        logo: "/images/logos/printcom-logo.jpg", // Replace with actual image paths
-        description: "Leading manufacturer of industrial printing components.",
-        website: "https://partner-a.com",
+        name: "Zechini",
+        logo: '/images/logos/zechini-logo.jpg',
+        description: "Zechini designs machines for bookbinding, paper converting, luxury packaging and children's books. Led by brothers Fulvio and Roberto, it has a wide and widespread commercial network that continues to expand all over the world.",
+        website: "https://zechini.com/",
+    },
+    {
+        name: "Kolbus",
+        logo: "/images/logos/kolbus-logo.jpg",
+        description: "KOLBUS is known for its long tradition of engineering excellence and its dedication to quality in every aspect, from consulting and commissioning to high life-cycle availability for its machines, and works to develop new methods that will generate and support efficient production processes. ",
     },
     {
         name: "CreaseStream",
         logo: "/images/logos/creaseStream-logo.jpeg",
-        description: "Renowned for providing innovative technology solutions.",
-        website: "https://partner-b.com",
+        description: "CreaseStream is an award-winning solution to  production problems for creasing and micro-perfoating. For the first time, low and medium volume printers can achieve flawless, accurate creasing every time, thanks to creasestream's amazingly versatile creasing and micro-perforating machine.",
+        website: "https://www.creasestream.com/",
     },
     {
         name: "Smag Graphique",
         logo: "/images/logos/smagGraphique-logo.jpeg",
-        description: "Leading manufacturer of industrial printing components.",
-        website: "https://partner-c.com",
+        description: "Design and manufacture of innovative solutions for the printing and finishing of labels and flexible packaging",
+        website: "https://www.smag-graphique.com/",
     },
     {
         name: "Westland",
         logo: "/images/logos/westland-logo.jpeg",
-        description: "Leading manufacturer of industrial printing components.",
-        website: "https://partner-c.com",
+        description: "The Westland Group, is an owner-managed family business and has around 800 employees in Europe, Asia and the USA. It is a leading international supplier of technically sophisticated elastomer components and, in addition to roller and sleeve rubber linings, also manufactures elastomer moulded parts for mechanical engineering, the household appliances and fittings industry as well as for gas control technology.",
+        website: "https://www.westland.eu/",
     },
 ];
 
@@ -47,7 +52,7 @@ const Partners = () => {
                 {partnersData.map((partner, index) => (
                     <div
                         key={index}
-                        className="bg-white shadow-xl hover:bg-black rounded-lg m-3 transform transition duration-500 hover:scale-105"
+                        className="bg-white shadow-xl flex flex-col justify-between hover:bg-black rounded-lg m-3 transform transition duration-500 hover:scale-105"
                     >
                         <div className='relative h-44'>
                             <Image
@@ -57,7 +62,7 @@ const Partners = () => {
                                 className="w-full h-40 object-contain p-4 bg-gray-100"
                             />
                         </div>
-                        <div className="p-6 border-2 border-red">
+                        <div className="p-6 ">
                             <h3 className="text-2xl font-bold mb-2 group-hover:text-gray-100">{partner.name}</h3>
                             <p className="text-gray-600 mb-4">{partner.description}</p>
                             <a
