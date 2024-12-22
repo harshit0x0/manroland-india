@@ -5,7 +5,7 @@ export default function TypewriterText({ text, className }: { text: string, clas
         let currSen = "";
         const keyframes = letters.map((letter, i) => {
             currSen += letter;
-            let num = ((i + 1) / letters.length) * 100;
+            const num = ((i + 1) / letters.length) * 100;
             const percent = num.toPrecision(3);
             return `${percent}% { content: "${currSen}";}`
         });
