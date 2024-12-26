@@ -29,11 +29,11 @@ export default function Services() {
 
     return (
         <main className="bg-gray-100 min-h-screen py-16">
-            <div className="container mx-auto px-6 lg:px-12">
+            <div className="container mx-auto px-6 md:px-12">
                 {/* Initial Paragraph */}
                 <header className="text-center mb-12">
-                    <h1 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-6">Our Services</h1>
-                    <div className="text-sm lg:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                    <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6">Our Services</h1>
+                    <div className="text-sm md:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
                         Even the 500 millionth impression has to look as fresh as the first one. This means that a press
                         must be kept in good shape. We recommend service packages. After all, professional service is the
                         only way to ensure that a highly productive printing system can deliver
@@ -47,10 +47,10 @@ export default function Services() {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className={`flex flex-col overflow-hidden rounded-lg group h-[400px] lg:h-[300px] lg:flex-row ${index % 2 === 0 ? "lg:flex-row-reverse" : ""} items-center`}
+                            className={`flex flex-col overflow-hidden rounded-lg group h-[400px] md:h-[300px] md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse" : ""} items-center`}
                         >
                             {/* Image Section */}
-                            <div className="lg:w-1/2 w-full h-full overflow-hidden shadow-lg relative bg-black">
+                            <div className="md:w-1/2 w-full h-full overflow-hidden shadow-lg relative bg-black">
 
                                 <Image
                                     src={`${service.imgUrl}`} // Example image path
@@ -62,7 +62,7 @@ export default function Services() {
                             </div>
 
                             {/* Text Section */}
-                            <div className="lg:w-1/2 w-full h-full group-hover:bg-black transition duration-500  flex flex-col justify-center p-6 lg:p-12 bg-white shadow-lg ">
+                            <div className="md:w-1/2 w-full h-full group-hover:bg-black transition duration-500  flex flex-col justify-center p-6 md:p-12 bg-white shadow-lg ">
                                 <h2 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-gray-200 transition-colors duration-300">
                                     {service.name}
                                 </h2>

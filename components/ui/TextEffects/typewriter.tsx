@@ -17,7 +17,7 @@ export default function TypewriterText({ text, className }: { text: string, clas
     keyframes.forEach((keyframe) => {
         keyframeString += keyframe + '\n'
     })
-    console.log(keyframeString);
+    // console.log(keyframeString);
     return (
         <div id="typewriterContent" className={"typewriter " + className}>
 

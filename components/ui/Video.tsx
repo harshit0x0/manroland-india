@@ -1,57 +1,68 @@
 'use client';
 
-import { useRef, useEffect } from "react";
+import { useRef} from "react";
 
 interface VideoProps extends React.HTMLProps<HTMLVideoElement> {
     src: string;
 }
 
 export function Video({ src, ...props }: VideoProps) {
-    const videoRef = useRef<HTMLVideoElement>(null);
+    const ref = useRef<HTMLVideoElement>(null);
 
-    useEffect(() => {
-        const video = videoRef.current;
-        if (video) {
-            // Adding event listeners (optional, for logging or other effects)
-            const handlePlay = () => console.log("Video is playing");
-            const handlePause = () => console.log("Video is paused");
+    // useEffect(() => {
+    //     const video = ref.current;
+    //     if (video) {
+    //         const handlePlay = () => console.log("Video is playing");
+    //         const handlePause = () => console.log("Video is paused");
 
-            video.addEventListener("play", handlePlay);
-            video.addEventListener("pause", handlePause);
+    //         video.addEventListener("play", handlePlay);
+    //         video.addEventListener("pause", handlePause);
 
-            return () => {
-                video.removeEventListener("play", handlePlay);
-                video.removeEventListener("pause", handlePause);
-            };
-        }
-    }, []);
+    //         return () => {
+    //             video.removeEventListener("play", handlePlay);
+    //             video.removeEventListener("pause", handlePause);
+    //         };
+    //     }
+    // }, []);
 
     const playVid = async () => {
-        if (videoRef.current && videoRef.current.paused) {
-            try {
-                setTimeout(async () => {
-                    await videoRef.current?.play();
-                }, 200)
-            } catch (error) {
-                console.error("Error playing video:", error);
-            }
+        const video = ref.current;
+        if(!video) return;
+        const isPlaying = video.currentTime > 0 && !video.paused && !video.ended 
+        && video.readyState > video.HAVE_CURRENT_DATA;
+        if (!isPlaying) {
+            video.play();
         }
+        // if (ref.current && ref.current.paused) {
+        //     try {
+        //         await ref.current?.play();
+        //     } catch (error) {
+        //         console.error("Error playing video:", error);
+        //     }
+        // }
     };
 
     const pauseVid = () => {
-        try {
-            if (videoRef.current && !videoRef.current.paused) {
-                videoRef.current.pause();
-            }
-        } catch (error) {
-            console.error("Error pausing video:", error);
+        const video = ref.current;
+        if(!video) return;
+        const isPlaying = video.currentTime > 0 && !video.paused && !video.ended 
+        && video.readyState > video.HAVE_CURRENT_DATA;
+        if (isPlaying) {
+            video.pause();
         }
+        // try {
+        //     if (ref.current && !ref.current.paused) {
+        //         ref.current.pause();
+        //     }
+        // } catch (error) {
+        //     console.error("Error pausing video:", error);
+        // }
     };
 
     return (
         <video
             {...props}
-            ref={videoRef}
+            ref={ref}
             preload="auto"
             loop
             muted

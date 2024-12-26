@@ -14,13 +14,20 @@ export default function CustomersSection() {
             if (!distY || !customer.clientHeight) return;
             if (window.scrollY > distY - 400 && window.scrollY < distY + customer?.clientHeight - 400) {
                 loveText?.classList.add("text-red-600");
-                (window.innerWidth >= 768) ? loveText?.classList.add("text-7xl") : loveText?.classList.add("text-4xl");
+                if (window.innerWidth >= 768) {
+                    loveText?.classList.add("text-7xl")
+                } else {
+                    loveText?.classList.add("text-4xl");
+                }
                 // console.log("effects added");
             }
             else {
                 loveText?.classList.remove("text-red-600");
-                (window.innerWidth >= 768) ? loveText?.classList.remove("text-7xl") : loveText?.classList.add("text-4xl");
-                // console.log("effects removed");
+                if (window.innerWidth >= 768) {
+                    loveText?.classList.remove("text-7xl")
+                } else {
+                    loveText?.classList.remove("text-4xl");
+                }// console.log("effects removed");
             }
         }
         window.addEventListener("scroll", handleScroll);
