@@ -55,7 +55,7 @@ export default function FooterExtension() {
                     <h3 className="text-lg font-bold mb-4">Contact Us</h3>
                     <ul className="space-y-2 text-sm text-gray-300">
                         <li>Phone: +01 145577393</li>
-                        <li>Email: mrsfiedIndia@marolandSheetfed.com</li>
+                        <li>Email: mrsfindia@marolandSheetfed.com</li>
                         <li>Address: MR Sheetfed India Pvt Ltd <br />
                             A-7, Phase 2 Community Centre <br />
                             Naraina Industrial Area,

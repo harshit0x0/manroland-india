@@ -136,7 +136,7 @@ export const partners: partnerType[] = [
     },
     {
         name: "CreaseStream",
-        logo: "/images/logos/CreaseStream-logo.jpeg",
+        logo: "/images/logos/creaseStream-logo.jpeg",
         description:
             "At last, a quick, easy and affordable way to achieve perfect creasing",
         website: "https://www.creasestream.com/",
