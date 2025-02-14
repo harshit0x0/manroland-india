@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const messages = [
     {
-        name: "Peter Rigo",
+        name: "Peter Rego",
         role: "Director Sales and Buises Development",
         message: "Technology is our canvas. With every solution we create, we strive to paint a masterpiece.",
         image: "/images/people/PeterRigo.jpg",
@@ -52,7 +52,7 @@ export default function AboutPage() {
                                     alt={person.name}
                                     height={200}
                                     width={200}
-                                    className="w-40 h-40 rounded-full mx-auto mb-4"
+                                    className="rounded-full mx-auto mb-4"
                                 />
                                 <h3 className="text-2xl font-bold text-center mb-2">{person.name}</h3>
                                 <p className="text-center text-sm text-gray-500 mb-4">{person.role}</p>

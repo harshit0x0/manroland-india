@@ -55,7 +55,7 @@ export default function FooterExtension() {
                     <h3 className="text-lg font-bold mb-4">Contact Us</h3>
                     <ul className="space-y-2 text-sm text-gray-300">
                         <li>Phone: +01 145577393</li>
-                        <li>Email: info@manroland.sheetfed.com</li>
+                        <li>Email: mrsfiedIndia@marolandSheetfed.com</li>
                         <li>Address: MR Sheetfed India Pvt Ltd <br />
                             A-7, Phase 2 Community Centre <br />
                             Naraina Industrial Area,
@@ -64,7 +64,7 @@ export default function FooterExtension() {
                     </ul>
                     <div className="mt-4 flex space-x-4">
                         {/* Social Media Icons */}
-                        <a href="#" className="text-gray-300 hover:text-white">
+                        <a href="https://www.facebook.com/manrolandindia/" className="text-gray-300 hover:text-white">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="w-6 h-6"
@@ -74,7 +74,7 @@ export default function FooterExtension() {
                                 <path d="M22 0H2C.895 0 0 .895 0 2v20c0 1.105.895 2 2 2h10.617v-8.422H8.874V9.768h3.743V7.392c0-3.712 2.259-5.742 5.548-5.742 1.608 0 2.99.12 3.392.173v3.93H18.96c-1.657 0-1.98.788-1.98 1.944v2.546h4.03l-.524 3.81h-3.506V24H22c1.105 0 2-.895 2-2V2c0-1.105-.895-2-2-2z" />
                             </svg>
                         </a>
-                        <a href="#" className="text-gray-300 hover:text-white">
+                        <a href="https://x.com/manroland" className="text-gray-300 hover:text-white">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="w-6 h-6"
@@ -84,14 +84,14 @@ export default function FooterExtension() {
                                 <path d="M24 4.56c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.723-.951.564-2.005.974-3.127 1.195-.897-.954-2.173-1.55-3.59-1.55-2.717 0-4.917 2.2-4.917 4.917 0 .386.044.762.127 1.124-4.084-.205-7.702-2.162-10.124-5.134-.424.729-.666 1.577-.666 2.482 0 1.712.871 3.223 2.191 4.108-.807-.026-1.566-.247-2.228-.616v.062c0 2.39 1.698 4.384 3.95 4.837-.413.113-.848.172-1.296.172-.317 0-.626-.031-.929-.089.626 1.955 2.444 3.379 4.6 3.419-1.68 1.317-3.808 2.104-6.115 2.104-.398 0-.79-.023-1.176-.068 2.181 1.399 4.768 2.215 7.548 2.215 9.051 0 13.999-7.498 13.999-13.999 0-.213-.004-.425-.014-.637.961-.695 1.796-1.562 2.457-2.548l-.047-.02z" />
                             </svg>
                         </a>
-                        <a href="#" className="text-gray-300 hover:text-white">
+                        <a href="https://www.linkedin.com/company/manroland-sheetfed-india-ltd" className="text-gray-300 hover:text-white">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="w-6 h-6"
                                 fill="currentColor"
                                 viewBox="0 0 24 24"
                             >
-                                <path d="M23.994 4.65c-.889.394-1.845.66-2.852.775a4.993 4.993 0 0 0 2.188-2.743 9.933 9.933 0 0 1-3.127 1.195 4.983 4.983 0 0 0-3.575-1.55c-3.675 0-6.127 3.1-5.4 6.561-4.08-.216-7.686-2.165-10.115-5.134-.387.674-.612 1.457-.612 2.293 0 1.65.84 3.106 2.115 3.96-.78-.025-1.52-.238-2.165-.593v.06c0 2.307 1.643 4.234 3.822 4.666-.4.108-.824.166-1.26.166-.307 0-.604-.03-.896-.086.606 1.88 2.343 3.267 4.406 3.308-1.635 1.28-3.697 2.05-5.937 2.05-.385 0-.766-.023-1.143-.065 2.11 1.355 4.614 2.143 7.307 2.143 8.778 0 13.576-7.268 13.576-13.577 0-.207-.004-.414-.012-.62.93-.688 1.732-1.547 2.372-2.525l-.043-.02z" />
+                                <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"></path>
                             </svg>
                         </a>
                     </div>

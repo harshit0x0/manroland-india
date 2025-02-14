@@ -165,8 +165,8 @@ export default function ContactPage() {
                     <div className="text-center">
                         <h3 className="text-xl font-bold mb-2">Email Us</h3>
                         <p className='text-sm text-gray-500'>
-                            <a href="mailto:info@manroland.sheetfed.com" className="text-primary hover:underline">
-                                info@manroland.sheetfed.com
+                            <a href="mailto:mrsfindia@manrolandsheetfed.com" className="text-primary hover:underline">
+                                mrsfindia@manroland.sheetfed.com
                             </a>
                         </p>
                     </div>
