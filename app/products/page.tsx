@@ -13,8 +13,15 @@ export default function ProductsPage() {
                     and innovation for all your printing needs.
                 </p>
             </section>
-
             <OurProducts />
+
+            <section className="bg-primary text-white text-center py-20 px-8">
+                <h2 className="text-1xl lg:text-3xl font-bold mb-4">Explore World Class Products from Our Partners</h2>
+                <p className="text-sm lg:text-md max-w-3xl mx-auto">
+                    Discover a wide selection of world-class printing machines from our trusted partners.
+                </p>
+            </section>
+
             <PartnerProducts />
 
         </main>

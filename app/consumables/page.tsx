@@ -1,6 +1,7 @@
 'use client';
+import Link from "next/link";
 
-export default function AboutPage() {
+export default function ConsumablesPage() {
     return (
         <main className="bg-gray-100 text-gray-800">
             {/* Hero Section */}
@@ -8,6 +9,13 @@ export default function AboutPage() {
                 <h1 className="text-3xl lg:text-5xl font-bold mb-4">Consumables</h1>
                 <div className={`w-0 mx-auto group-hover:w-third h-1 bg-red-500 transistion duration-500 ease-in-out`}></div>
             </section>
+            <div className="bg-orange-400 w-fit mx-auto text-center px-8 py-6 text-white font-semibold rounded hover:bg-gray-800 transition duration-500 ease-in-out mt-4">
+                <Link
+                    href="/consumables/purchase"
+                >
+                    Purchase Consumables
+                </Link>
+            </div>
 
             <div className="container lg:px-12 mx-auto">
                 <section className="pt-16 px-8 py-10 lg:pt-20 ">

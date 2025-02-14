@@ -29,7 +29,7 @@ function PartnerCard({ partner }: { partner: partnerType }) {
     const plugin = useRef(Autoplay({ delay: 1000, stopOnInteraction: false }));
     return (
         <motion.div
-            className="relative w-full lg:w-3/4 bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-800 hover:lg:w-7/8 hover:bg-violet-300 hover:text-white transistion duration-500"
+            className="relative mx-auto w-full lg:w-3/4 bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-800 hover:lg:w-7/8 hover:bg-violet-300 hover:text-white transistion duration-500"
             onHoverStart={() => setHovered(true)}
             onHoverEnd={() => setHovered(false)}
         >
@@ -59,6 +59,7 @@ function PartnerCard({ partner }: { partner: partnerType }) {
             <motion.div
                 className="overflow-hidden bg-gray-100 dark:bg-gray-800"
                 animate={{ height: !isDesktop ? "auto" : hovered ? "auto" : 0 }}
+                transition={{ duration: 1 }}
             >
                 <Carousel
                     plugins={[plugin.current]}
